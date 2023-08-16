@@ -1,0 +1,202 @@
+.information {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+
+  @include onPad {
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+
+  @include onSmallDesctop {
+    padding-left: 48px;
+  }
+  @include onDesctop {
+    padding-left: 172px;
+    justify-content: space-between;
+  }
+  @include onBigDesctop {
+    padding-left: 229px;
+  }
+
+  &__side-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include onPad {
+      min-width: 430px;
+      align-items: flex-start;
+      padding-top: 48px;
+    }
+
+    @include onSmallDesctop {
+      min-width: 465px;
+    }
+    @include onDesctop {
+      padding-top: 56px;
+    }
+    @include onBigDesctop {
+      padding-top: 70px;
+    }
+
+    &__name {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      text-align: center;
+
+      @include onPhone {
+        font-size: 28px;
+      }
+
+      @include onPad {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        text-align: start;
+      }
+
+      @include onSmallDesctop {
+        font-size: 38px;
+      }
+
+      @include onDesctop {
+        font-size: 42px;
+      }
+      @include onBigDesctop {
+        font-size: 56px;
+      }
+    }
+
+    &__description {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 140%;
+      opacity: 0.8;
+
+      @include onPhone {
+        font-size: 16px;
+      }
+
+      @include onPad {
+        margin-top: 24px;
+        text-align: start;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+
+      @include onSmallDesctop {
+        margin-top: 32px;
+        font-size: 18px;
+        max-width: 465px;
+      }
+
+      @include onDesctop {
+        font-size: 20px;
+      }
+
+      @include onBigDesctop {
+        font-size: 26px;
+      }
+    }
+
+    & :last-child {
+      margin-top: 24px;
+
+      @include onPad {
+        margin-top: 34px;
+      }
+
+      @include onSmallDesctop {
+        margin-top: 48px;
+      }
+
+      @include onDesctop {
+        margin-top: 56px;
+      }
+
+      @include onBigDesctop{
+        margin-top: 70px;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+
+    @include onPad {
+      max-width: 540px;
+    }
+
+    @include onSmallDesctop {
+      max-width: 640px;
+    }
+
+    @include onDesctop {
+      max-width: 740px;
+    }
+    @include onBigDesctop {
+      max-width: 1006px;
+    }
+  }
+}
+
+.buy-btn {
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 5px;
+  max-width: max-content;
+  background: #FF1F1F;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  padding: 14px 14px;
+
+  @include onPhone {
+    font-size: 17px;
+    padding: 16px 24px;
+  }
+
+  @include onPad {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  @include onSmallDesctop {
+    font-size: 18px;
+    padding: 16px 28px;
+  }
+
+  @include onDesctop {
+    padding: 18px 32px;
+    font-size: 20px;
+  }
+  @include onBigDesctop{
+    font-size: 26px;
+    padding: 24px 40px;
+  }
+
+}
+
+.active {
+  display: block;
+}
+
+.disabled {
+  display: none;
+}

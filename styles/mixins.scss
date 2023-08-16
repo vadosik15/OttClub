@@ -1,0 +1,31 @@
+
+
+@mixin onBigDesctop{
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+@mixin onDesctop{
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin onSmallDesctop{
+  @media (min-width: 990px) {
+    @content;
+  }
+}
+
+@mixin onPad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onPhone{
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+

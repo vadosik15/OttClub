@@ -1,0 +1,300 @@
+.canals {
+  margin-top: 112px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 16PX;
+  padding-right: 16PX;
+
+  @include onPhone {
+    margin-top: 126px;
+  }
+
+  @include onPad {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 210px;
+  }
+
+  @include onSmallDesctop {
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-top: 168px;
+  }
+
+  @include onDesctop {
+    padding-left: 168px;
+    padding-right: 168px;
+    margin-top: 200px;
+  }
+
+  @include onBigDesctop {
+    padding-left: 229px;
+    padding-right: 229px;
+    margin-top: 240px;
+  }
+
+  &__name {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    opacity: 0.9;
+
+    @include onPhone {
+      font-size: 28px;
+    }
+
+    @include onPad {
+      font-size: 30px;
+      text-align: start;
+    }
+
+    @include onSmallDesctop {
+      font-size: 36px;
+    }
+
+    @include onDesctop {
+      font-size: 40px;
+    }
+
+    @include onBigDesctop {
+      font-size: 52px;
+    }
+
+    img {
+      top: -20px;
+      position: absolute;
+    }
+
+
+  }
+
+  &__description {
+    margin-top: 8px;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 0px 16px;
+    opacity: 0.7;
+
+    @include onPhone {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      margin-top: 13px;
+    }
+
+    @include onPad {
+      text-align: left;
+      padding: 0;
+      padding-right: 50%;
+      margin-top: 16px;
+    }
+
+    @include onSmallDesctop {
+      margin-top: 20px;
+    }
+
+    @include onDesctop {
+      padding-right: 60%;
+    }
+
+    @include onBigDesctop {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__filters {
+    display: flex;
+    margin-top: 24.5px;
+    overflow-x: hidden;
+    gap: 8px;
+
+    @include onPhone {
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    @media (min-width:1228px) {
+      justify-content: space-between;
+    }
+
+    @include onSmallDesctop {
+      margin-top: 33px;
+    }
+
+    @include onBigDesctop {
+      margin-top: 50px;
+    }
+
+    &-point {
+      padding: 8px 16px 9px 16px;
+      justify-content: center;
+      background-color: transparent;
+      align-items: center;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      border-radius: 5px;
+      border: 2px solid rgba(255, 255, 255, 0.80);
+      transition: 0.3s;
+
+      @include onPad {
+        padding: 12px 18px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+      }
+
+      @include onBigDesctop {
+        padding: 16px 24px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+      }
+
+      &:hover {
+        border: 2px solid #FC3232;
+        background: #FC3232;
+      }
+    }
+  }
+
+  &__table {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 17px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include onPad {
+      margin-top: 40px;
+    }
+
+    @include onSmallDesctop {
+      margin-top: 40px;
+    }
+
+    @include onBigDesctop {
+      margin-top: 50px;
+    }
+
+    table {
+
+      tbody {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        flex-direction: column;
+
+        @include onPad {
+          gap: 32px;
+        }
+
+        @include onBigDesctop {
+          gap: 50px;
+        }
+      }
+
+      tr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+
+        @include onPad {
+          gap: 24px;
+        }
+
+        @include onSmallDesctop {
+          gap: 25px;
+        }
+
+        @include onBigDesctop {
+          gap: 70px;
+        }
+      }
+
+      .canals__table-item {
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+        img {
+          @include onPhone {
+            width: 102px;
+          }
+
+          @include onPad {
+            width: 154px;
+          }
+
+          @include onSmallDesctop {
+            width: 160px;
+          }
+
+          @include onDesctop {
+            width: 180px;
+          }
+
+          @include onBigDesctop {
+            width: 236px;
+          }
+        }
+      }
+
+      .onPad {
+        display: none;
+
+        @include onPad {
+          display: block;
+        }
+      }
+
+      .onDesc {
+        display: none;
+
+        @include onSmallDesctop {
+          display: block;
+        }
+      }
+    }
+
+    &-more {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      text-transform: uppercase;
+      align-self: flex-end;
+
+      @include onBigDesctop {
+        font-size: 18px;
+      }
+
+      img {
+        @include onBigDesctop {
+          width: 32px;
+        }
+      }
+    }
+  }
+}

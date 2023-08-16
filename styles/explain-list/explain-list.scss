@@ -1,0 +1,102 @@
+.explain-list {
+  display: none;
+  padding: 24px 40px 41px 40px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+
+  @include onPad {
+    display: flex;
+  }
+  @include onSmallDesctop {
+    padding: 32px 48px;
+  }
+  @include onDesctop {
+    padding: 48px 172px 56px 172px;
+    gap: 32px;
+  }
+  @include onBigDesctop {
+    padding: 60px 228px 80px 230px;
+  }
+
+  &__item {
+    width: 154px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+
+    @include onSmallDesctop {
+      width: 205px;
+      align-items: flex-start;
+      gap: 0;
+    }
+    @include onDesctop {
+      width: 240px;
+    }
+    @include onBigDesctop {
+      width: 341px;
+    }
+
+    &__name {
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      padding: 0px 16px;
+
+      @include onSmallDesctop {
+        text-align: left;
+        padding: 0;
+        margin-top: 20px;
+      }
+
+      @include onDesctop {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+      @include onBigDesctop {
+        font-size: 24px;
+        margin-top: 32px;
+      }
+    }
+
+    &__description {
+      display: none;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 150%;
+
+      @include onSmallDesctop {
+        display: block;
+        margin-top: 16px;
+      }
+
+      @include onDesctop {
+        margin-top: 12px;
+      }
+      @include onBigDesctop {
+        font-size: 20px;
+        margin-top: 16px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  svg {
+    width: 48px;
+
+    @include onSmallDesctop {
+      width: 64px;
+    }
+
+    @include onDesctop {
+      width: 72px;
+    }
+    @include onBigDesctop{
+      width: 96px;
+    }
+  }
+}

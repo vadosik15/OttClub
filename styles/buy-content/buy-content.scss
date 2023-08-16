@@ -1,0 +1,304 @@
+.buy-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @include onPad {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+  }
+
+  svg {
+    position: absolute;
+    z-index: 0;
+    display: none;
+  }
+
+  .eye {
+    position: absolute;
+    margin-top: 18px;
+
+    @include onPhone {
+      margin-top: 45px;
+    }
+    @include onDesctop {
+      width: 54px;
+    }
+    @include onBigDesctop {
+      width: 74px;
+      margin-top: 60px;
+    }
+  }
+
+  &__container {
+    margin-top: 85px;
+    z-index: 2;
+
+    @include onPhone {
+      margin-top: 97px;
+    }
+
+    @include onSmallDesctop {
+      margin-top: 110px;
+    }
+  }
+
+  .cost {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+
+    &__number {
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
+
+      &-side {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        @include onPad {
+          opacity: 0.8;
+        }
+      }
+
+
+      &-time {
+        align-self: center;
+        text-align: center;
+        margin-top: 24px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 200px;
+
+        @include onPhone {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.32px;
+        }
+
+        @include onPad {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.32px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .list-point {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 16px;
+
+    @include onPhone {
+      gap: 23px;
+    }
+
+
+    &__item {
+      display: flex;
+      gap: 16px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.32px;
+
+      @include onSmallDesctop {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.18px;
+      }
+
+      @include onDesctop {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .mail-input {
+    z-index: 3;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onPhone {
+      margin-top: 35px;
+    }
+
+    @include onPad {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+    }
+
+    @include onSmallDesctop {
+      margin-top: 41px;
+    }
+    @include onBigDesctop {
+      margin-top: 50px;
+    }
+
+    input {
+      padding: 15px 16px;
+      width: 100%;
+
+      @include onPad {
+        padding: 15px 16px;
+        width: 300px;
+        border-radius: 5px 0px 0px 5px;
+        border: 1px solid #D0D0D1;
+        opacity: 0.9;
+      }
+
+      @include onSmallDesctop {
+        padding: 15px 16px 16px 16px;
+      }
+
+      @include onBigDesctop {
+        width: 400px;
+padding: 19px 20px 20px 20px;
+      }
+
+
+      &::placeholder {
+        color: var(--text-notactive, rgba(60, 60, 67, 0.60));
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.15px;
+      }
+    }
+
+    &__btn {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      padding: 16px 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      background: #FF1F1F;
+      transition: 0.2s;
+
+      @include onPad {
+        border-radius: 0px 5px 5px 0px;
+        font-size: 17px;
+        font-weight: 500;
+        padding: 16px 32px;
+      }
+
+      @include onSmallDesctop {
+        padding: 16px 40px;
+      }
+      @include onDesctop {
+        font-size: 20px;
+      }
+      @include onBigDesctop {
+        padding: 20px 50px;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 7px #FF1F1F;
+      }
+    }
+  }
+
+}
+
+#onSmallPhone {
+  display: block;
+  z-index: 1;
+
+  @include onPhone {
+    display: none;
+  }
+}
+
+#onPhone {
+  display: none;
+  z-index: 1;
+
+  @include onPhone {
+    display: block;
+  }
+
+  @include onPad {
+    display: none;
+  }
+}
+
+#onPad {
+  display: none;
+  z-index: 1;
+
+  @include onPad {
+    display: block;
+    z-index: 0;
+  }
+
+  @include onSmallDesctop {
+    display: none;
+  }
+}
+
+#onSmallDesctop {
+  display: none;
+  z-index: 1;
+
+  @include onSmallDesctop {
+    display: block;
+  }
+
+  @include onDesctop {
+    display: none;
+  }
+}
+
+#onDesctop {
+  display: none;
+  z-index: 1;
+
+  @include onDesctop {
+    display: block;
+  }
+
+  @include onBigDesctop {
+    display: none;
+  }
+}
+
+#onBigDesctop {
+  display: none;
+  z-index: 1;
+
+  @include onBigDesctop {
+    display: block;
+  }
+}

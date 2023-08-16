@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 16px 16px 8px 16px;
+  width: 100%;
+
+  @include onPhone {
+    padding: 44px 16px 13px 16px;
+  }
+  @include onPad {
+    padding: 23px 40px;
+  }
+  @include onSmallDesctop{
+    padding: 23px 48px;
+  }
+  @include onDesctop {
+    padding: 23px 172px;
+  }
+  @include onBigDesctop {
+    padding: 30px 229px;
+  }
+
+
+  &__logo {
+    width: 56px;
+    @include onPad {
+      width: 64px;
+    }
+    @include onSmallDesctop {
+      width: 72px;
+    }
+    @include onDesctop {
+      width: 72px;
+    }
+    @include onBigDesctop {
+      width: 96px;
+    }
+  }
+
+  &__side-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &__social {
+      display: flex;
+      gap: 24px;
+
+      .facebook-btn {
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .telegram-btn {
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      @media(max-width:487px) {
+        display: none;
+      }
+    }
+
+    &__btns {
+
+      button {
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        padding: 11px 24px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          border: 2px solid #FFF;
+        }
+        @include onBigDesctop {
+          font-size: 20px;
+        }
+      }
+
+      .registration-btn {
+        @media(max-width:487px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
